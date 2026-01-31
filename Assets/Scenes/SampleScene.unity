@@ -434,7 +434,7 @@ Transform:
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
   m_LocalRotation: {x: -0.12699446, y: 0.87049365, z: -0.2989535, w: -0.3697837}
-  m_LocalPosition: {x: 12.492425, y: 13.051645, z: 6.9958973}
+  m_LocalPosition: {x: 9.187306, y: 11.903184, z: 9.099169}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -532,7 +532,7 @@ Transform:
   m_GameObject: {fileID: 1719618386}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.26, y: 3.0625958, z: -1.9100001}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -555,6 +555,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemyPrefab: {fileID: -1439118958119830936, guid: a0cdc46e0366c6e4792058a5f2c21b63, type: 3}
   _spawnEvery: 2
+  _spawnVerticalPositionShift: 3
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
