@@ -1,13 +1,14 @@
-using System;
 using UnityEngine;
 
 public class SpawnPointSettings : MonoBehaviour
 {
     [SerializeField] private float _direction = 0.0f;
-
+    
     private readonly float _gizmoArrowSize = 3.0f;
     private readonly float _gizmoArrowSideSize = 0.2f;
     private readonly float _gizmoArrowSideAngle = 150.0f;
+
+    public float Direction => _direction;
 
     private void OnDrawGizmosSelected()
     {

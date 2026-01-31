@@ -170,6 +170,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3317638943262154458, guid: 08d8ea55add24d64d95950ecb6d38124, type: 3}
+      propertyPath: _direction
+      value: -55.3
+      objectReference: {fileID: 0}
     - target: {fileID: 3993946251025610747, guid: 08d8ea55add24d64d95950ecb6d38124, type: 3}
       propertyPath: m_Name
       value: SpawnPoint-1
@@ -326,6 +330,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3317638943262154458, guid: 08d8ea55add24d64d95950ecb6d38124, type: 3}
+      propertyPath: _direction
+      value: 74.73
+      objectReference: {fileID: 0}
     - target: {fileID: 3993946251025610747, guid: 08d8ea55add24d64d95950ecb6d38124, type: 3}
       propertyPath: m_Name
       value: SpawnPoint-3
@@ -426,7 +434,7 @@ Transform:
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
   m_LocalRotation: {x: -0.12699446, y: 0.87049365, z: -0.2989535, w: -0.3697837}
-  m_LocalPosition: {x: 6.227298, y: 9.707352, z: 6.2324057}
+  m_LocalPosition: {x: 12.492425, y: 13.051645, z: 6.9958973}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -480,6 +488,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3317638943262154458, guid: 08d8ea55add24d64d95950ecb6d38124, type: 3}
+      propertyPath: _direction
+      value: 150.9
+      objectReference: {fileID: 0}
     - target: {fileID: 3993946251025610747, guid: 08d8ea55add24d64d95950ecb6d38124, type: 3}
       propertyPath: m_Name
       value: SpawnPoint-2
@@ -503,6 +515,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1719618387}
+  - component: {fileID: 1719618388}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -528,6 +541,20 @@ Transform:
   - {fileID: 873306649}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1719618388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1719618386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8f77090257032f45ba0e749b47ddda1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemyPrefab: {fileID: -1439118958119830936, guid: a0cdc46e0366c6e4792058a5f2c21b63, type: 3}
+  _spawnEvery: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
