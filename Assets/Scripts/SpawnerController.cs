@@ -34,8 +34,8 @@ public class SpawnerController : MonoBehaviour
     {
         SpawnPointSettings spawnPoint = _spawnPoints[Random.Range(0, _spawnPoints.Length)];
         Vector3 position = spawnPoint.transform.position + new Vector3(0, _spawnVerticalPositionShift, 0);
-        Quaternion rotation = Quaternion.Euler(new Vector3(0, spawnPoint.Direction, 0));
         
-        Instantiate(_enemyPrefab,  position, rotation);
+        EnemyController spawnedEnemy = Instantiate(_enemyPrefab,  position, Quaternion.identity);
+        spawnedEnemy.MoveDirection = spawnPoint.Direction;
     }
 }

@@ -172,7 +172,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3317638943262154458, guid: 08d8ea55add24d64d95950ecb6d38124, type: 3}
       propertyPath: _direction
-      value: -55.3
+      value: -54.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3317638943262154458, guid: 08d8ea55add24d64d95950ecb6d38124, type: 3}
+      propertyPath: _directionAngle
+      value: -51.76
       objectReference: {fileID: 0}
     - target: {fileID: 3993946251025610747, guid: 08d8ea55add24d64d95950ecb6d38124, type: 3}
       propertyPath: m_Name
@@ -334,6 +338,10 @@ PrefabInstance:
       propertyPath: _direction
       value: 74.73
       objectReference: {fileID: 0}
+    - target: {fileID: 3317638943262154458, guid: 08d8ea55add24d64d95950ecb6d38124, type: 3}
+      propertyPath: _directionAngle
+      value: 71.85
+      objectReference: {fileID: 0}
     - target: {fileID: 3993946251025610747, guid: 08d8ea55add24d64d95950ecb6d38124, type: 3}
       propertyPath: m_Name
       value: SpawnPoint-3
@@ -492,6 +500,10 @@ PrefabInstance:
       propertyPath: _direction
       value: 150.9
       objectReference: {fileID: 0}
+    - target: {fileID: 3317638943262154458, guid: 08d8ea55add24d64d95950ecb6d38124, type: 3}
+      propertyPath: _directionAngle
+      value: 163.95
+      objectReference: {fileID: 0}
     - target: {fileID: 3993946251025610747, guid: 08d8ea55add24d64d95950ecb6d38124, type: 3}
       propertyPath: m_Name
       value: SpawnPoint-2
@@ -555,7 +567,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemyPrefab: {fileID: -1439118958119830936, guid: a0cdc46e0366c6e4792058a5f2c21b63, type: 3}
   _spawnEvery: 2
-  _spawnVerticalPositionShift: 3
+  _spawnVerticalPositionShift: 1.1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
