@@ -1,17 +1,17 @@
 using System.Collections;
 using UnityEngine;
 
-public class SpawnerController : MonoBehaviour
+public class Spawner : MonoBehaviour
 {
-    [SerializeField] private EnemyController _enemyPrefab;
+    [SerializeField] private Enemy _enemyPrefab;
     [SerializeField] private float _spawnEvery = 2.0f;
     [SerializeField] private float _spawnVerticalPositionShift = 0.2f;
     
-    private SpawnPointSettings[] _spawnPoints;
+    private SpawnPoint[] _spawnPoints;
 
     private void Awake()
     {
-        _spawnPoints = gameObject.GetComponentsInChildren<SpawnPointSettings>();
+        _spawnPoints = gameObject.GetComponentsInChildren<SpawnPoint>();
     }
 
     private void Start()
@@ -32,10 +32,10 @@ public class SpawnerController : MonoBehaviour
 
     private void SpawnEnemy()
     {
-        SpawnPointSettings spawnPoint = _spawnPoints[Random.Range(0, _spawnPoints.Length)];
+        SpawnPoint spawnPoint = _spawnPoints[Random.Range(0, _spawnPoints.Length)];
         Vector3 position = spawnPoint.transform.position + new Vector3(0, _spawnVerticalPositionShift, 0);
         
-        EnemyController spawnedEnemy = Instantiate(_enemyPrefab,  position, Quaternion.identity);
+        Enemy spawnedEnemy = Instantiate(_enemyPrefab,  position, Quaternion.identity);
         spawnedEnemy.MoveDirection = spawnPoint.Direction;
     }
 }

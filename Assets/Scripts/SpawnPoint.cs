@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SpawnPointSettings : MonoBehaviour
+public class SpawnPoint : MonoBehaviour
 {
     [SerializeField] private float _directionAngle = 0.0f;
     
