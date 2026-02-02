@@ -12,6 +12,7 @@ public class SpawnPoint : MonoBehaviour
     public float DirectionAngle => _directionAngle;
 
     public Vector3 Direction => Quaternion.AngleAxis(_directionAngle, Vector3.up) * Vector3.forward; 
+    public Target Target => _target;
 
     private void OnDrawGizmosSelected()
     {

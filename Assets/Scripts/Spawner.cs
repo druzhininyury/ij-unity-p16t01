@@ -36,6 +36,6 @@ public class Spawner : MonoBehaviour
         Vector3 position = spawnPoint.transform.position + new Vector3(0, _spawnVerticalPositionShift, 0);
         
         Enemy spawnedEnemy = Instantiate(_enemyPrefab,  position, Quaternion.identity);
-        spawnedEnemy.MoveDirection = spawnPoint.Direction;
+        spawnedEnemy.target = spawnPoint.Target.transform;
     }
 }

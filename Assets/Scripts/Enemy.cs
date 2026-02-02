@@ -2,18 +2,15 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] private float _speed = 1.0f;
-
-    private Vector3 _moveDirection = Vector3.forward;
+    [SerializeField] private float _speed = 2.0f;
     
-    public Vector3 MoveDirection
-    {
-        get => _moveDirection;
-        set => _moveDirection = value.normalized;
-    }
+    public Transform target { get; set; }
 
     private void Update()
     {
-        transform.position += _speed * Time.deltaTime * _moveDirection;
+        Vector3 targetPosition = target.position;
+        targetPosition.y = transform.position.y;
+        Vector3 moveDirection = (targetPosition - transform.position).normalized;
+        transform.position += _speed * Time.deltaTime * moveDirection;
     }
 }
