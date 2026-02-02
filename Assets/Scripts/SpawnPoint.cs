@@ -3,6 +3,7 @@ using UnityEngine;
 public class SpawnPoint : MonoBehaviour
 {
     [SerializeField] private float _directionAngle = 0.0f;
+    [SerializeField] private Target _target;
     
     private readonly float _gizmoArrowSize = 3.0f;
     private readonly float _gizmoArrowSideSize = 0.2f;
