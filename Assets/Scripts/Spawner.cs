@@ -1,18 +1,23 @@
+using System;
 using System.Collections;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Spawner : MonoBehaviour
 {
     [SerializeField] private Enemy _enemyPrefab;
     [SerializeField] private float _spawnEvery = 2.0f;
     [SerializeField] private float _spawnVerticalPositionShift = 0.2f;
+    [SerializeField] private SpawnPoint[] _spawnPoints;
     
-    private SpawnPoint[] _spawnPoints;
     private bool _isSpawning = true;
 
     private void Awake()
     {
-        _spawnPoints = gameObject.GetComponentsInChildren<SpawnPoint>();
+        if (_spawnPoints == null)
+        {
+            _spawnPoints = Array.Empty<SpawnPoint>();
+        }
     }
 
     private void Start()
