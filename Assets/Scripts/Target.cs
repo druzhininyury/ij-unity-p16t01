@@ -1,7 +1,7 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Renderer))]
 public class Target : MonoBehaviour
 {
     [SerializeField] private Color _color;
@@ -11,15 +11,17 @@ public class Target : MonoBehaviour
     private readonly float _moveSpeed = 3.0f;
     private readonly float _gizmosRoutePointMarkerRadius = 0.4f;
 
+    private Renderer _renderer;
+    private int _colorNameId = Shader.PropertyToID("_Color");
     private int _currentRoutePointIndex = 0;
 
     private void Awake()
     {
         MaterialPropertyBlock materialPropertyBlock = new MaterialPropertyBlock();
-        Renderer renderer =  GetComponent<Renderer>();
-        renderer.GetPropertyBlock(materialPropertyBlock);
-        materialPropertyBlock.SetColor("_Color", _color);
-        renderer.SetPropertyBlock(materialPropertyBlock);
+        _renderer =  GetComponent<Renderer>();
+        _renderer.GetPropertyBlock(materialPropertyBlock);
+        materialPropertyBlock.SetColor(_colorNameId, _color);
+        _renderer.SetPropertyBlock(materialPropertyBlock);
     }
     
     private void Update()
@@ -33,7 +35,7 @@ public class Target : MonoBehaviour
 
         if (transform.position == _routePoints[_currentRoutePointIndex])
         {
-            _currentRoutePointIndex = (_currentRoutePointIndex + 1) % _routePoints.Count;
+            _currentRoutePointIndex = ++_currentRoutePointIndex % _routePoints.Count;
         }
     }
     

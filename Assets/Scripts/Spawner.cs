@@ -8,6 +8,7 @@ public class Spawner : MonoBehaviour
     [SerializeField] private float _spawnVerticalPositionShift = 0.2f;
     
     private SpawnPoint[] _spawnPoints;
+    private bool _isSpawning = true;
 
     private void Awake()
     {
@@ -23,7 +24,7 @@ public class Spawner : MonoBehaviour
     {
         WaitForSeconds waitForSeconds = new WaitForSeconds(_spawnEvery);
         
-        while (true)
+        while (_isSpawning)
         {
             SpawnEnemy();
             yield return waitForSeconds;
